@@ -7,6 +7,7 @@ Gem::Specification.new do |s|
   s.authors     = ["Alex MacCaw, Giulian Drimba"]
   s.email       = ["info@eribium.org","giuliandrimba@gmail.com"]
   s.homepage    = ""
+  s.license     = 'MIT'
   s.summary     = %q{Adds CommonJS support to Sprockets}
   s.description = s.summary
 
