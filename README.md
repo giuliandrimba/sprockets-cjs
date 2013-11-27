@@ -2,7 +2,9 @@ This library adds CommonJS support to [Sprockets](https://github.com/sstephenson
 
 ## About
 
-This project is a fork of the original sprockets-commonjs. Due to the lack of maintainance of the original project, I decided to create a new one based on it, and publish it as a gem.
+This project is a fork of the original [sprockets-commonjs](https://github.com/maccman/sprockets-commonjs). 
+
+Due to the lack of maintainance of the original project, I decided to create a new one based on it, make some changes and publish it as a new gem.
 
 ## What is CommonJS?
 
