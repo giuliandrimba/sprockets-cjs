@@ -1,8 +1,8 @@
 require 'test/unit'
 require 'tempfile'
-require 'sprockets-commonjs'
+require 'sprockets-cjs'
 
-class SprocketsCommonjsTest < Test::Unit::TestCase
+class SprocketsCJSTest < Test::Unit::TestCase
 
   TEST_DIR = File.expand_path('..', __FILE__)
   LIB_DIR  = File.expand_path('../lib/assets/javascripts', TEST_DIR)
@@ -11,7 +11,7 @@ class SprocketsCommonjsTest < Test::Unit::TestCase
 
   def setup
     env = Sprockets::Environment.new
-    env.register_postprocessor 'application/javascript', Sprockets::CommonJS
+    env.register_postprocessor 'application/javascript', Sprockets::CJS
     env.append_path TEST_DIR
     env.append_path LIB_DIR
     outfile = Tempfile.new('sprockets-output')

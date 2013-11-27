@@ -2,7 +2,7 @@ require 'sprockets'
 require 'tilt'
 
 module Sprockets
-  class CommonJS < Tilt::Template
+  class CJS < Tilt::Template
 
     WRAPPER = '%s.define({"%s":' +
               'function(exports, require, module){' +
@@ -24,7 +24,7 @@ module Sprockets
 
     def evaluate(scope, locals, &block)
       if commonjs_module?(scope)
-        scope.require_asset 'sprockets/commonjs'
+        scope.require_asset 'sprockets/cjs'
         WRAPPER % [ namespace, commonjs_module_name(scope), data ]
       else
         data
@@ -46,4 +46,4 @@ module Sprockets
   end
 end
 
-require 'sprockets/commonjs/engine'
+require 'sprockets/cjs/engine'

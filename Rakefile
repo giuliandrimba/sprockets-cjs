@@ -1,6 +1,6 @@
 require 'bundler/gem_tasks'
 require 'sprockets'
-require 'sprockets/commonjs'
+require 'sprockets/cjs'
 require 'rake/testtask'
 require 'appraisal'
 
