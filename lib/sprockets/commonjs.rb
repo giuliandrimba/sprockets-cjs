@@ -36,11 +36,11 @@ module Sprockets
     attr_reader :namespace
 
     def commonjs_module?(scope)
-      scope.pathname.basename.to_s.include?('.module')
+      scope.pathname.to_s.include?('modules')
     end
 
     def commonjs_module_name(scope)
-      scope.logical_path.sub(/\.module$/, '')
+      scope.logical_path.to_s
     end
 
   end

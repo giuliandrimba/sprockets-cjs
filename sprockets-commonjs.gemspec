@@ -2,15 +2,15 @@
 $:.push File.expand_path("../lib", __FILE__)
 
 Gem::Specification.new do |s|
-  s.name        = "sprockets-commonjs"
-  s.version     = '0.0.5'
-  s.authors     = ["Alex MacCaw"]
-  s.email       = ["info@eribium.org"]
+  s.name        = "sprockets-cjs"
+  s.version     = '0.1.0'
+  s.authors     = ["Alex MacCaw, Giulian Drimba"]
+  s.email       = ["info@eribium.org","giuliandrimba@gmail.com"]
   s.homepage    = ""
   s.summary     = %q{Adds CommonJS support to Sprockets}
   s.description = s.summary
 
-  s.rubyforge_project = "sprockets-commonjs"
+  s.rubyforge_project = "sprockets-cjs"
 
   s.files         = `git ls-files`.split("\n")
   s.test_files    = `git ls-files -- {test,spec,features}/*`.split("\n")

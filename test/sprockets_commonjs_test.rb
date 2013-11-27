@@ -24,7 +24,7 @@ class SprocketsCommonjsTest < Test::Unit::TestCase
   end
 
   def test_modularizes_modules
-    assert_match %r[require.define\({\"foo\":function], @output
+    assert_match %r[require.define\({\"modules/foo\":function], @output
     assert_match %r["Foo!"], @output
   end
 

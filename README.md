@@ -1,5 +1,9 @@
 This library adds CommonJS support to [Sprockets](https://github.com/sstephenson/sprockets).
 
+## About
+
+This project is a fork of the original sprockets-commonjs. Due to the lack of maintainance of the original project, I decided to create a new one based on it, and publish it as a gem.
+
 ## What is CommonJS?
 
 The CommonJS module format is a way of encapsulating JavaScript libraries, ensuring they have to explicitly require and export properties they use. In a nutshell:
@@ -15,7 +19,7 @@ The CommonJS module format is a way of encapsulating JavaScript libraries, ensur
 
 ## This library
 
-This library adds CommonJS support to Sprockets, so it can wrap up JavaScript files as modules, and serve them appropriately. This is done by giving any JS files you want as modules, the `.module.js` extension.
+This library adds CommonJS support to Sprockets, so it can wrap up JavaScript files as modules, and serve them appropriately. This is done by storing any JS files you want in a folder called `modules`
 
 Sprockets will then wrap up the JS library when it's requested, with the following:
 
@@ -27,7 +31,7 @@ One caveat to the approach this library takes, is that dependencies loaded throu
 
 ## Usage
 
-1. Add `gem 'sprockets-commonjs'` to your `Gemfile`
-1. Add `.module.js` to any JavaScript files you want as modules, i.e. `users.module.js`
-1. Require all the modules, e.g.: `//= require_tree ./models`
-1. Or, require individual modules, e.g.: `//= require users.module`
+1. Add `gem 'sprockets-cjs'` to your `Gemfile`
+1. Add your javascript files inside a  `modules` folder
+1. Require all the modules, e.g.: `//= require_tree ./modules`
+1. Or, require individual modules, e.g.: `//= require ./modules/users`

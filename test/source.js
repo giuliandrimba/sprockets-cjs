@@ -1,2 +1,2 @@
-//= require foo.module.js
+//= require ./modules/foo.js
 //= require bar.js
