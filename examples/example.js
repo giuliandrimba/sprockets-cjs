@@ -1,7 +1,7 @@
 module.exports = function(){
   alert('Long live the Programs!');
 };
-var Program = require('modules/program');
+var Program = require('./program');
 
 module.exports = function(){
   alert('Long live the Users');
