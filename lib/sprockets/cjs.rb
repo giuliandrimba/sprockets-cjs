@@ -40,7 +40,7 @@ module Sprockets
     end
 
     def commonjs_module_name(scope)
-      scope.logical_path.to_s
+      scope.logical_path.to_s.gsub("modules","")
     end
 
   end
