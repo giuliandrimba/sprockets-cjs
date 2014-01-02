@@ -37,3 +37,7 @@ One caveat to the approach this library takes, is that dependencies loaded throu
 1. Add your javascript files inside a  `modules` folder
 1. Require all the modules, e.g.: `//= require_tree ./modules`
 1. Or, require individual modules, e.g.: `//= require ./modules/users`
+
+
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/giuliandrimba/sprockets-cjs/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+
