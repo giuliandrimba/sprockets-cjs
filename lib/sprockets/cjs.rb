@@ -23,7 +23,7 @@ module Sprockets
     end
 
     def evaluate(scope, locals, &block)
-      if commonjs_module?(scope)
+      if !is_cjs_lib?(scope) && commonjs_module?(data)
         scope.require_asset 'sprockets/cjs'
         WRAPPER % [ namespace, commonjs_module_name(scope), data ]
       else
@@ -35,12 +35,16 @@ module Sprockets
 
     attr_reader :namespace
 
-    def commonjs_module?(scope)
-      scope.pathname.to_s.include?('modules')
+    def commonjs_module?(data)
+      data.to_s.include?('module.exports')
     end
 
     def commonjs_module_name(scope)
-      scope.logical_path.to_s.gsub("modules","")
+      scope.logical_path.to_s
+    end
+
+    def is_cjs_lib?(scope)
+      scope.logical_path.to_s.include?('sprockets/cjs')
     end
 
   end
